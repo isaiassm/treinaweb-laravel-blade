@@ -13,7 +13,17 @@
 
 Route::get('/', function () {
     return view('news.index')->with([
-        'name' => 'Blog do <strong>Treinaweb</strong><script>alert("executou sem permissao")</script>',
-        'description' => 'Novidades de tecnologia'
+        'name' => 'Blog do <strong>Treinaweb</strong>',
+        'description' => 'Novidades de tecnologia',
+        'posts' => [
+            [
+                'subject' => 'Novidades do PHP 7.2',
+                'content' => 'Conheca as novidades do php...'
+            ],
+            [
+                'subject' => 'Novidades do C# 8',
+                'content' => 'Conheca as novidades do C#...'
+            ]
+        ]
     ]);
 });
