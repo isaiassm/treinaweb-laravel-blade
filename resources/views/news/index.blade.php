@@ -43,3 +43,8 @@
 @else
   <p>Não temos nenhum comentário</p>
 @endif
+
+
+@unless ($comments > 0)
+  <p>Número de comentário invalido</p>  
+@endunless
