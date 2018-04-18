@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('bemvindos/welcome');
+    return view('news.index')->with([
+        'name' => 'Blog do Treinaweb',
+        'description' => 'Novidades de tecnologia'
+    ]);
 });
