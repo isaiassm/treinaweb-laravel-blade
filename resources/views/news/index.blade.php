@@ -12,3 +12,15 @@
 
   console.log(posts);
 </script>
+
+<br>
+@{{ name }}
+@{{ age }}
+@{{ email }}
+
+<br>
+@verbatim
+  {{ name }}
+  {{ age }}
+  {{ email }}
+@endverbatim
