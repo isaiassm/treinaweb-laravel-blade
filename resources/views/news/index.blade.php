@@ -1,4 +1,5 @@
-<?= $name ?>
-<?= $description ?>
+{{ $name }}
+{{ $description }}
+
 <br>
-<?php echo $name . ' ' . $description?>
+{!! $name !!}

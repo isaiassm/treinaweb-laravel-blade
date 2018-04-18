@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('news.index')->with([
-        'name' => 'Blog do Treinaweb',
+        'name' => 'Blog do <strong>Treinaweb</strong><script>alert("executou sem permissao")</script>',
         'description' => 'Novidades de tecnologia'
     ]);
 });
