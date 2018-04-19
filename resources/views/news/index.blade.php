@@ -37,7 +37,7 @@
             <hr>
           @endforelse
                     
-          @includeWhen($paginate, 'partials.paginate')
+          @includeFirst(['main.paginate', 'blog.paginate', 'partials.paginate'])
         </div>
       </div>
     </div>
