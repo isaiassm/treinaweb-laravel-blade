@@ -72,3 +72,11 @@
 @empty ($tag)
   <p>Esse artigo não possui tags</p>
 @endempty
+
+@auth
+  <p>Bem Vindo: {{ auth()->user()->name }}</p>
+@endauth
+
+@guest
+  <p>Conheça as vantagens de se cadastrar em nosso blog!</p>
+@endguest
