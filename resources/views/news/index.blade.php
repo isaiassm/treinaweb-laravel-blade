@@ -37,13 +37,13 @@
             <hr>
           @endforelse
                     
-          @includeFirst(['main.paginate', 'blog.paginate', 'partials.paginate'])
+          @includeFirst(['main.paginate', 'blog.paginate', 'partials.paginate'], ['first'=>'Primeiro','last'=>'Último'])
         </div>
       </div>
     </div>
     <hr>
 
-    @include('partials.footer')
+    @include('partials.footer', ['copyright'=>'Treinaweb todos os direitos reservador @ 2018'])
 
   </body>
 
