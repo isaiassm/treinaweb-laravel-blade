@@ -64,6 +64,8 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           
           @forelse ($posts as $post)
+            @continue ($post['category'] == 'java')
+
             <div class="post-preview">
               <a href="post.html">
                 <h2 class="post-title">
