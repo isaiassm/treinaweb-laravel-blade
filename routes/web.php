@@ -16,6 +16,7 @@ Route::get('/', function () {
         'name' => 'Blog do Treinaweb',
         'slug' => 'Laravel Blade',
         'description' => 'Novidades de tecnologia',
+        'paginate' => true,
         'posts' => [
             [
                 'subject' => 'Novidades do PHP 7.2',
