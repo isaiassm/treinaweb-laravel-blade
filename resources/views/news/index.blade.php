@@ -27,6 +27,8 @@
 
 @php
   $comments = -10;
+
+  $category = 'c#-avancado';
 @endphp
 
 {{-- ficar somente no blade (php) --}}
@@ -48,3 +50,17 @@
 @unless ($comments > 0)
   <p>Número de comentário invalido</p>  
 @endunless
+
+@switch ($category)
+  @case('php-basico')
+    <p>Muito bom começar seus estudos em PHP!!!</p>
+    @break
+
+  @case('php-avancado')
+    <p>Legal você voltar a estudar PHP!!!</p>
+    @break
+
+  @default
+    <p>Muito bom ter você em nosso blog!!!</p>
+@endswitch
+
