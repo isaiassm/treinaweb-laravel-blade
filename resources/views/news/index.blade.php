@@ -29,6 +29,7 @@
   $comments = -10;
 
   $category = 'c#-avancado';
+
 @endphp
 
 {{-- ficar somente no blade (php) --}}
@@ -64,3 +65,10 @@
     <p>Muito bom ter você em nosso blog!!!</p>
 @endswitch
 
+@isset ($tag)
+  <p>A tag do artigo é: {{ $tag }}</p>
+@endisset
+
+@empty ($tag)
+  <p>Esse artigo não possui tags</p>
+@endempty
