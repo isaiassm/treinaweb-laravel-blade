@@ -13,7 +13,8 @@
 
 Route::get('/', function () {
     return view('news.index')->with([
-        'name' => 'Blog do <strong>Treinaweb</strong>',
+        'name' => 'Blog do Treinaweb',
+        'slug' => 'Laravel Blade',
         'description' => 'Novidades de tecnologia',
         'posts' => [
             [
