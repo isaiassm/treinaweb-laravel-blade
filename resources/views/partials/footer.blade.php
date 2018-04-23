@@ -4,29 +4,29 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <ul class="list-inline text-center">
-            @component('components.social', ['color'=>'red'])
+            @social(['color'=>'red'])
               @slot('link')
                 <a href="http://twitter.com/treinaweb">
               @endslot
 
               <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-            @endcomponent
+            @endsocial
 
-            @component('components.social', ['color'=>'blue'])
+            @social(['color'=>'blue'])
               @slot('link')
                 <a href="http://facebook.com/treinaweb">
               @endslot
 
               <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-            @endcomponent
+            @endsocial
 
-            @component('components.social', ['color'=>'black'])
+            @social(['color'=>'black'])
               @slot('link')
                 <a href="http://github.com/treinaweb">
               @endslot
 
               <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-            @endcomponent
+            @endsocial
           </ul>
           <p class="copyright text-muted">{{ $copyright }}</p>
         </div>
