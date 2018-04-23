@@ -11,6 +11,18 @@
 |
 */
 
+Route::get('/post', function() {
+    return view('post.single', [
+        'name' => 'Post de Exemplo',
+        'slug' => 'post de exemplo 123',
+        'description' => 'Novidades do post de exemplo'
+    ]);
+});
+
+Route::get('/contato', function() {
+    return view('contact.index');
+});
+
 Route::get('/{lang?}', function ($lang='pt-BR') {
 
     App::setLocale($lang);
@@ -54,10 +66,3 @@ Route::get('/{lang?}', function ($lang='pt-BR') {
 });
 
 
-Route::get('/post', function() {
-    return view('post.single', [
-        'name' => 'Post de Exemplo',
-        'slug' => 'post de exemplo 123',
-        'description' => 'Novidades do post de exemplo'
-    ]);
-});
