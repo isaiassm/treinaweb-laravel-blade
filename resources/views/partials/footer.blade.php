@@ -5,14 +5,26 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <ul class="list-inline text-center">
             @component('components.social')
+              @slot('link')
+                <a href="http://twitter.com/treinaweb">
+              @endslot
+
               <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
             @endcomponent
 
             @component('components.social')
+              @slot('link')
+                <a href="http://facebook.com/treinaweb">
+              @endslot
+
               <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
             @endcomponent
 
             @component('components.social')
+              @slot('link')
+                <a href="http://github.com/treinaweb">
+              @endslot
+
               <i class="fa fa-github fa-stack-1x fa-inverse"></i>
             @endcomponent
           </ul>
