@@ -11,7 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/{lang?}', function ($lang='pt-BR') {
+
+    App::setLocale($lang);
+
     return view('news.index')->with([
         'name' => 'Blog do Treinaweb',
         'slug' => 'Laravel Blade',
