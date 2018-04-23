@@ -4,6 +4,12 @@
   Página de Detalhes
 @endsection
 
+@section('header')
+  <p>mais esse conteúdo</p>
+
+  @parent
+@endsection
+
 @section('content')
    <!-- Post Content -->
    <article>
