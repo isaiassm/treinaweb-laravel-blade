@@ -1,5 +1,9 @@
 @extends('layout.app')
 
+@section('title')
+  Página de Detalhes
+@endsection
+
 @section('content')
    <!-- Post Content -->
    <article>

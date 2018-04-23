@@ -1,5 +1,9 @@
 @extends('layout.app')
 
+@section('title')
+  Página Inicial
+@endsection
+
 @section('content')
   <div class="container">
     <div class="row">
