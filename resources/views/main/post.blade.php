@@ -8,7 +8,7 @@
     </h3>
   </a>
   <p class="post-meta">
-    Postado por <a href="#">{{ $post['author'] }}</a> em {{ $post['date'] }}
+    Postado por <a href="#">{{ $post['author'] }}</a> em @datebr($post['date'])
   </p>
 </div>
 <hr>

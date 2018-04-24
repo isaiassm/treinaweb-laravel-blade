@@ -15,6 +15,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Blade::component('components.social', 'social');
+
+        Blade::directive('datebr', function($ex) {
+            return "<?php echo (new DateTime($ex))->format('d/m/Y'); ?>";
+        });
     }
 
     /**
