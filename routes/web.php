@@ -38,28 +38,32 @@ Route::get('/{lang?}', function ($lang='pt-BR') {
                 'content' => 'Conheca as novidades do php...',
                 'author'  => 'Elton Fonseca',
                 'date'    => '2018-04-18',
-                'category'=> 'php'  
+                'category'=> 'php',
+                'type'    => 'video'  
             ],
             [
                 'subject' => 'Novidades do C# 8',
                 'content' => 'Conheca as novidades do C#...',
                 'author'  => 'Elton Fonseca',
                 'date'    => '2018-04-18',
-                'category'=> 'c#'  
+                'category'=> 'c#',
+                'type'    => ''  
             ],
             [
                 'subject' => 'Novidades do Java 10',
                 'content' => 'Conheca as novidades do Java...',
                 'author'  => 'Elton Fonseca',
                 'date'    => '2018-04-18',
-                'category'=> 'java'  
+                'category'=> 'java',
+                'type'    => 'nota'  
             ],
             [
                 'subject' => 'Novidades do JavaScript',
                 'content' => 'Conheca as novidades do Javascript...',
                 'author'  => 'Elton Fonseca',
                 'date'    => '2018-04-18',
-                'category'=> 'javascript'  
+                'category'=> 'javascript',
+                'type'    => ''  
             ]
         ]
     ]);

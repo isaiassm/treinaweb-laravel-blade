@@ -19,6 +19,10 @@ class AppServiceProvider extends ServiceProvider
         Blade::directive('datebr', function($ex) {
             return "<?php echo (new DateTime($ex))->format('d/m/Y'); ?>";
         });
+
+        Blade::if('posttype', function($posttype, $c) {
+            return $posttype == $c;
+        });
     }
 
     /**

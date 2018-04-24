@@ -1,4 +1,12 @@
-<div class="post-preview">
+@posttype($post['type'], 'video')
+  <div class="post-preview" style="background-color:cornflowerblue">
+@elseposttype($post['type'], 'nota')
+  <div class="post-preview" style="background-color:burlywood">
+@else
+  <div class="post-preview">
+@endposttype
+
+
   <a href="post.html">
     <h2 class="post-title">
       {{ $post['subject'] }}
