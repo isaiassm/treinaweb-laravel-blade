@@ -4,6 +4,7 @@ php artisan tinker
 - para entrar no shell e ultilizar classes e metodos do php
 
 \App\Post::find(1)
+- O post é referente a model
 - busca por id
 
 \App\Post::where('create_at, "2018-07-19 19:59:34")->first()
