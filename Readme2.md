@@ -42,3 +42,33 @@ $seq->search(5)
 
 - Existem varios metodos para trabalhar com os dados devem ser encontrados aqui:
 (https://laravel.com/docs/5.7/eloquent-collections)
+
+## Trabalhando com Metodos de inserção no banco de dados
+
+example:
+
+- Instancia a model 
+$meuPost = new \App\Post
+
+- Cria um titulo com o metodo passado
+ $meuPost->title = 'meu post de teste'
+=> "meu post de teste"
+
+- Cria um titulo com o metodo passado
+>>> $meuPost->content = 'Meu conteudo de teste'
+=> "Meu conteudo de teste"
+
+>>> $meuPost
+=> App\Post {#774
+     title: "meu post de teste",
+     content: "Meu conteudo de teste",
+   }
+
+- Salva no banco de dados   
+>>> $meuPost->save() 
+=> true
+
+- Modo de inserção com array, desvantagem dele é que não salva com os campos de data 
+>>> \App\Post::insert(['title' => 'meu post de test 2', 'content' => 'meu conteu
+do de teste 2'])
+=> true
