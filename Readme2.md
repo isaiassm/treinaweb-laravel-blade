@@ -48,27 +48,28 @@ $seq->search(5)
 example:
 
 - Instancia a model 
-$meuPost = new \App\Post
+<p> $meuPost = new \App\Post
 
 - Cria um titulo com o metodo passado
  $meuPost->title = 'meu post de teste'
-=> "meu post de teste"
+<p> => "meu post de teste"
 
-- Cria um titulo com o metodo passado
->>> $meuPost->content = 'Meu conteudo de teste'
-=> "Meu conteudo de teste"
+- Cria um conteudo com o metodo passado
+<p> >>> $meuPost->content = 'Meu conteudo de teste'
+<p> => "Meu conteudo de teste"
 
->>> $meuPost
-=> App\Post {#774
-     title: "meu post de teste",
-     content: "Meu conteudo de teste",
+- Mostra o que tem armazenado na variavel
+<p> >>> $meuPost
+<p> => App\Post {#774
+<p>     title: "meu post de teste",
+<p>     content: "Meu conteudo de teste",
    }
 
 - Salva no banco de dados   
->>> $meuPost->save() 
-=> true
+<p> >>> $meuPost->save() 
+<p> => true
 
 - Modo de inserção com array, desvantagem dele é que não salva com os campos de data 
 >>> \App\Post::insert(['title' => 'meu post de test 2', 'content' => 'meu conteu
 do de teste 2'])
-=> true
+<p> => true
