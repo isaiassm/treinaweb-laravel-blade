@@ -66,10 +66,37 @@ example:
    }
 
 - Salva no banco de dados   
-<p> >>> $meuPost->save() 
+<p> >>> $meuPost->**save**() 
 <p> => true
 
 - Modo de inserção com array, desvantagem dele é que não salva com os campos de data 
->>> \App\Post::insert(['title' => 'meu post de test 2', 'content' => 'meu conteu
+>>> \App\Post::**insert**(['title' => 'meu post de test 2', 'content' => 'meu conteu
 do de teste 2'])
 <p> => true
+
+## Trabalhando com Metodos de Criação
+
+- fillable 
+<p> Lista branca que insere apenas os campos que serão utilizados.
+
+- guarded
+<p> Faz o contrario do fillable se insere os campos que não serão utilizados, sendo que o que sobrar é ignorado e ultilizavel.
+
+-  \App\Post::**create**(['title' => 'Meu post de test 3', 'content' => 'Meu conteu
+do de teste 3'])
+<p> Cria o registro no banco de dados.
+
+-  \App\Post::**firstOrCreate**(['title' => 'Meu post de test 3', 'content' => 'me
+post 4'])
+<p> Procura se tem algum registro com o titulo passado, se tiver ele retorna o registro, se não ele cria no banco um novo registro.
+
+- $meuPostTest = \App\Post::**firstOrNew**(['title' => 'Meu post de test 3', 'content' => 'me
+post 4'])
+
+<p> Salvar em uma variavel
+<p> Diferente do firstorcreate ele procura no banco o registro caso não tiver ele salva apenas como um instancia.
+<p> Logo deve-se inserir o metodo para salvar no banco.
+<p> $meuPostTest->save()
+
+
+
