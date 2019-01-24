@@ -1,22 +1,14 @@
-@posttype($post['type'], 'video')
-  <div class="post-preview" style="background-color:cornflowerblue">
-@elseposttype($post['type'], 'nota')
-  <div class="post-preview" style="background-color:burlywood">
-@else
-  <div class="post-preview">
-@endposttype
-
-
-  <a href="post.html">
+<div class="post-preview">
+<a href="{{ route('posts.show', $post) }}">
     <h2 class="post-title">
-      {{ $post['subject'] }}
+      {{ $post->title }}
     </h2>
     <h3 class="post-subtitle">
-        {{ $post['content'] }}
+        {{ $post->content }}
     </h3>
   </a>
   <p class="post-meta">
-    Postado por <a href="#">{{ $post['author'] }}</a> em @datebr($post['date'])
+    Postado por <a href="#">Linguagens </a> em @datebr($post->created_at)
   </p>
 </div>
 <hr>

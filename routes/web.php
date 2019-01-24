@@ -11,56 +11,17 @@
 |
 */
 
-Route::get('/post/{post}', 'Site\PostController@show');
+Route::get('/post/{post}', 'Site\PostController@show')->name('posts.show');
+Route::get('/', 'Site\PostController@index');
 
 Route::get('/contato', function() {
     return view('contact.index');
 });
 
-Route::get('/{lang?}', function ($lang='pt-BR') {
 
-    App::setLocale($lang);
 
-    return view('news.index')->with([
-        'name' => 'Blog do Treinaweb',
-        'slug' => 'Laravel Blade',
-        'description' => 'Novidades de tecnologia',
-        'paginate' => true,
-        'posts' => [
-            [
-                'subject' => 'Novidades do PHP 7.2',
-                'content' => 'Conheca as novidades do php...',
-                'author'  => 'Elton Fonseca',
-                'date'    => '2018-04-18',
-                'category'=> 'php',
-                'type'    => 'video'  
-            ],
-            [
-                'subject' => 'Novidades do C# 8',
-                'content' => 'Conheca as novidades do C#...',
-                'author'  => 'Elton Fonseca',
-                'date'    => '2018-04-18',
-                'category'=> 'c#',
-                'type'    => ''  
-            ],
-            [
-                'subject' => 'Novidades do Java 10',
-                'content' => 'Conheca as novidades do Java...',
-                'author'  => 'Elton Fonseca',
-                'date'    => '2018-04-18',
-                'category'=> 'java',
-                'type'    => 'nota'  
-            ],
-            [
-                'subject' => 'Novidades do JavaScript',
-                'content' => 'Conheca as novidades do Javascript...',
-                'author'  => 'Elton Fonseca',
-                'date'    => '2018-04-18',
-                'category'=> 'javascript',
-                'type'    => ''  
-            ]
-        ]
-    ]);
-});
+    
+
+  
 
 
