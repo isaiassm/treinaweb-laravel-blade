@@ -98,5 +98,19 @@ post 4'])
 <p> Logo deve-se inserir o metodo para salvar no banco.
 <p> $meuPostTest->save()
 
+## Trabalhando com Metodos de Atualização
 
+- Criamos uma variavel passando nossa model para procurar o registro de numero 2
+<p> $post = \App\Post::find(2)
 
+<p> - apos obter o resultado alteramos o titulo da seguinte forma
+<p> - $post->title = 'Linguagens para desenvolver no mundo'
+<p> Salvamos no banco com o metodo save
+<p> $post->save()
+
+- Atualizando o campo passando algumas condiçoes
+<p>  \App\Post::where('id', 2)->update(['title' => 'Mercado de linguas'])
+<P> - Passamos o where para alterar o id 2 e o campo de title para inserir o que sera mudado.
+
+<p>  \App\Post::where('id','>=', 5)->update(['title' => 'Mercado de linguas'])
+<p> - Colocamos a condição de >= onde ele atualizara os campos que forem encontrados pela condição.
