@@ -10,7 +10,7 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         @each('main.post', $posts, 'post', 'main.empty_post')
                   
-        @includeFirst(['main.paginate', 'blog.paginate', 'partials.paginate'], ['first'=>'Primeiro','last'=>'Último'])
+        @include('main.paginate')
       </div>
     </div>
   </div>
