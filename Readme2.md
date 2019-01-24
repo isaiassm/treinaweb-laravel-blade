@@ -114,3 +114,20 @@ post 4'])
 
 <p>  \App\Post::where('id','>=', 5)->update(['title' => 'Mercado de linguas'])
 <p> - Colocamos a condição de >= onde ele atualizara os campos que forem encontrados pela condição.
+
+
+## Trabalhando com Metodos de Exclusão de dados
+
+<p> - Colocamos nossa model + metodo armazenada em uma variavel
+<p> $post = \App\Post::find(6)
+
+<p> Para deletar ultilizamos 2 metodos diferentes
+
+<p> - Deleta o que esta armazenado na variavel
+<p> $post->delete()
+
+<p> - Deleta de acordo com o id colocado, pode ser em conjuntos e tambem em array
+<p> \App\Post::destroy(4)
+
+<p> Deleta de acordo com a condição passada, Tambem suporta conjuntos.
+<p> \App\Post::where('id', 7)->delete()
