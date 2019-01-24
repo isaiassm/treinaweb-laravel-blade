@@ -13,6 +13,7 @@
 
 Route::get('/post/{post}', 'Site\PostController@show')->name('posts.show');
 Route::get('/', 'Site\PostController@index');
+Route::get('/admin', 'Site\PostController@listar');
 
 Route::get('/contato', function() {
     return view('contact.index');

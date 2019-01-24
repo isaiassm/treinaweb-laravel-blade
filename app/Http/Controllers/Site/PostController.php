@@ -26,4 +26,10 @@ class PostController extends Controller
          'posts' => $posts
      ]);
    }
+
+   public function listar()
+   {
+      $listar = Post::all();
+      return view('post.listagem')->with('listar', $listar);
+   }
 }
