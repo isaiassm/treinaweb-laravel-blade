@@ -131,3 +131,20 @@ post 4'])
 
 <p> Deleta de acordo com a condição passada, Tambem suporta conjuntos.
 <p> \App\Post::where('id', 7)->delete()
+
+## Trabalhando com Relacionamento de Tabelas
+ <p> Primeiro adicionamos na tabela de details alguns campos relacionados com a tabela de post
+ 
+ <p> - Busca a tabela post e o que tem armazenado nela 
+ <p>$post = \App\Post::find(1)
+ 
+ <p> - exibe o que a tabala de detalhes tem de relação com a tabela de posts
+ <p>$post->details
+
+ <p> Procedimento reverso
+ 
+ <p> - Busca a tabela post e o que tem armazenado nela 
+ <p>  $detalhes = \App\Details::find(2)
+
+ <p> - exibe o que a tabala de posts tem de relação com a tabela de detalhes
+ <p>  $detalhes->post
