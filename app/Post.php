@@ -14,9 +14,14 @@ class Post extends Model
      * 
      * 
      */
-    
+
     public function details()
     {
         return $this->hasOne('App\Details');
     }
+
+    /** Caso as colunas não seguisem as convecoes poderiamos passar no retorno o nome dos campos
+    * return $this->hasOne('App\Details', 'post_id', 'id');
+    * A primeira codicao faz referencia a chave estrangeira logo a segunda ao campo da coluna principal
+    */
 }
