@@ -7,7 +7,7 @@
 @section('content')
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-        <form class="form-horizontal" method="post" action="{{route(posts.update)}}">
+        <form class="form-horizontal" method="post" action="{{route('posts.update', $post->id)}}">
             {{ csrf_field() }}
             {{ method_field('PUT') }}
 

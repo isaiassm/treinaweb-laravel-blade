@@ -24,7 +24,7 @@
             <td>
         <a class="btn btn-success" href="{{ route('posts.edit', $post->id) }}">Editar</a>
 
-        <form style="display: inline" action="{{route('posts.destroy', $post->id)}}">
+        <form style="display: inline" action="{{ route('posts.destroy', $post->id)}}" method="post">
         {{ csrf_field() }}
         {{ method_field('DELETE') }}
             
@@ -39,6 +39,18 @@
           @endforelse
         </tbody>
       </table>
+      
+      <div class="row">
+        <div class="col-md-10">
+            {{ $posts->links() }}
+        </div>
+        <div class="col-md-2">
+            <a href="{{ route('posts.create') }}" class="btn btn-default">Criar Post</a>
+        </div>
+        
+        
+      </div>
+
     </div>
 </div>
 
