@@ -148,3 +148,22 @@ post 4'])
 
  <p> - exibe o que a tabala de posts tem de relação com a tabela de detalhes
  <p>  $detalhes->post
+
+ ## Trabalhando com persistencia de Tabelas
+ <p> Primeiro buscamos o post 3
+ <p>  $post3 = \App\Post::find(3)
+
+ <p> Logo apos criamos uma nova instancia para a tabela de detalhes
+ <p>  $detalhes = new \App\Details
+
+ <p> Determinamos valores para os campors
+ <p> $detalhes->status = 'publicado' <br>
+      => "publicado"
+<p> >>> $detalhes->visibility = 'publico' <br>
+      => "publico"
+
+<p> Utilizamos o metodo associate para fazer relacionamento com a model post
+<p> $detalhes->post()->associate($post3)
+      
+<p> por fim salvamos no banco
+<p> $detalhes->save()     
