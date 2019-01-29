@@ -17,7 +17,12 @@ class Post extends Model
 
     public function details()
     {
-        return $this->hasOne('App\Details');
+        return $this->hasOne('App\Details')
+                    ->withDefault(function($details){
+                        $details->status = 'rascunho';
+                        $details->visibility = 'privado';
+                    });
+
     }
 
     /** Caso as colunas não seguisem as convecoes poderiamos passar no retorno o nome dos campos
