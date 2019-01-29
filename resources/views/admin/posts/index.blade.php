@@ -9,6 +9,8 @@
           <tr>
             <th >Id</th>
             <th >Título</th>
+            <th >Status</th>
+            <th >Visibilidade</th>
             <th >Ações</th>
           </tr>
         </thead>
@@ -21,6 +23,8 @@
                 {{$post->title}}
             </a>
             </td>
+        <td>{{ $post->details->status }}</td>
+        <td>{{ $post->details->visibility }}</td>
             <td>
         <a class="btn btn-success" href="{{ route('posts.edit', $post->id) }}">Editar</a>
 

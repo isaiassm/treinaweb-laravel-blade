@@ -24,7 +24,9 @@ class PostController extends Controller
     public function store(postRequest $request)
     {
 
-        $post = Post::create($request->all());
+        $post = Post::create($request->only('title', 'content'));
+
+        $post->details()->create($request->only('status', 'visibility'));
 
         if($post){
             $request->session()->flash('success', 'Post cadastrado com sucesso');
@@ -48,9 +50,14 @@ class PostController extends Controller
 
     public function update(PostRequest $request, Post $post)
     {
-        $result = $post->update($request->all());
+        $result = $post->update($request->only('title', 'content'));
+
+
 
         if ($result){
+
+            $post->details->update($request->only('status', 'visibility'));
+
             $request->session()->flash('success', 'Post atualizado com sucesso');
         }
         else{
