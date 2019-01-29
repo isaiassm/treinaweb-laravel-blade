@@ -21,7 +21,13 @@ class PostController extends Controller
 
    public function index()
    {
-      $posts = Post::orderBy('created_at','desc')->paginate(2);
+      $posts = Post::orderBy('created_at','desc')
+                     ->whereHas('details', function($query){
+                     $query->where('status', 'publicado')
+                           ->where('visibility', 'publico');
+                     })
+                     ->paginate(2);
+
       return view('news.index')->with([
          'posts' => $posts
      ]);
