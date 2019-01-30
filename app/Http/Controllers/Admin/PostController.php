@@ -40,7 +40,7 @@ class PostController extends Controller
 
     public function show(Post $post)
     {
-        return view('admin.posts.edit', compact('post'));
+        return view('admin.posts.show', compact('post'));
     }
 
     public function edit(Post $post)

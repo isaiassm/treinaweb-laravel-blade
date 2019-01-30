@@ -15,7 +15,7 @@
         <p>O título do post é: {{$post->title}}</p>
         <p>O conteúdo do post é: {{$post->content}}</p>
 
-        <a href="{{ route ('post.index')}}">Voltar para a lista de projetos</a>
+        <a href="{{ route ('posts.index')}}">Voltar para a lista de projetos</a>
         </div>
     </div>
 
