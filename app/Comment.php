@@ -6,11 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
-    protected $table = 'comments';
 
-    protected $primaryKey = 'id';
-    protected $KeyType = 'string';
-    public $incrementing = false;
-
-    public $timestamps = false;
+    /**
+     * Mapeia o relacionamento com o model posts
+     * 
+     * 
+     */
+    public function post()
+    {
+       return $this->belongsTo('App\Post');
+    }
 }

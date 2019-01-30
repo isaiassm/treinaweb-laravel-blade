@@ -24,6 +24,16 @@ class Post extends Model
                     });
 
     }
+     /**
+     * Mapeia o relacionamento com o model details
+     * 
+     * 
+     */
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
 
     /** Caso as colunas não seguisem as convecoes poderiamos passar no retorno o nome dos campos
     * return $this->hasOne('App\Details', 'post_id', 'id');
