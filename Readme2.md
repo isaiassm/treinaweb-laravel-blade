@@ -167,3 +167,13 @@ post 4'])
       
 <p> por fim salvamos no banco
 <p> $detalhes->save()     
+
+## Metodo de persistencia 1 para n
+
+<p> $post->comments()->createMany (['title' => 'meu titulo' , 'content' => 'meu comentario'], ['title' => 'meu titulo1' , 'content' => 'meu comentario1']);
+
+<p> Ele cria uma collection, podendo inserir 1 ou + arrays
+
+<p> saveMany = comporta varios arrays na hora de salvar no banco, insntacia e array.
+
+<p> associate() recebe como parametro a variavel que foi ultilizada para fazer os arrays.
