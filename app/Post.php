@@ -8,7 +8,6 @@ class Post extends Model
 {
     protected $fillable = ['id','title', 'content', 'created_at', 'updated_at'];
 
-
     /**
      * Mapeia o relacionamento com o model details
      * 
