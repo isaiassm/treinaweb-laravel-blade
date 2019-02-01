@@ -324,6 +324,7 @@ class ComposerStaticInita97e653a0cb295a70090697f9b37b84e
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\Site\\CommentController' => __DIR__ . '/../..' . '/app/Http/Controllers/Site/CommentController.php',
         'App\\Http\\Controllers\\Site\\PostController' => __DIR__ . '/../..' . '/app/Http/Controllers/Site/PostController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
