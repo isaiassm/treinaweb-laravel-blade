@@ -177,3 +177,21 @@ post 4'])
 <p> saveMany = comporta varios arrays na hora de salvar no banco, insntacia e array.
 
 <p> associate() recebe como parametro a variavel que foi ultilizada para fazer os arrays.
+
+## Alguns metodos de persistencia N para N
+<p> WithTimestamps() 
+<p> -  Serve para que na hora criação ele passe no banco a hora e data de criacao (serve para inserir em todas funcoes)
+
+<p> attach() 
+<p> Faz uma relacao com outra model passando como parametro o ID, tambem recebe um array.
+
+<p> detach
+<p> Faz operacao contraria do attach ou seja, desfaz a relacao.
+
+<p> sync 
+<p> remove tudo que tiver relacao menos os id´s que forem passados dentro do array, concluimos que ele não vai atacar os que forem passados dentro do array o resto é quebrado o relacionamento.
+
+<p> toggle
+<p> Recebe um array e passando o id  quebra a relacao
+
+
