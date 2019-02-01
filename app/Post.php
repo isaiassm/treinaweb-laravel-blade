@@ -38,4 +38,8 @@ class Post extends Model
     * return $this->hasOne('App\Details', 'post_id', 'id');
     * A primeira codicao faz referencia a chave estrangeira logo a segunda ao campo da coluna principal
     */
+    public function categories()
+    {
+        return $this->belongsToMany('App\Category');
+    }
 }
