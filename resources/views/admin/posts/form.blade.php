@@ -16,10 +16,11 @@
     <div class="col-sm-10">
         <select name="categories_ids[]" class="form-control" multiple>
            @foreach ($categories as $category)
-
-           {{in_array( $category->id, $post->categories->pluck['id']->all()) ? 'selected' : ''}}
-
-            <option value="{{$category->id}}">{{$category->name}}</option>
+            <option
+            @if(request()->is['admin/posts/*/edit'])
+                {{in_array( $category->id, $post->categories->pluck['id']->all()) ? 'selected' : ''}}
+            @endif
+            value="{{$category->id}}">{{$category->name}}</option>
            @endforeach
             
         </select>
