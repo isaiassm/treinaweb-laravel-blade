@@ -194,4 +194,12 @@ post 4'])
 <p> toggle
 <p> Recebe um array e passando o id  quebra a relacao
 
+## Eager loading 
+<p> O problema conhecido como n + 1 pode ser resolvido passando no metodo **with** o nome da relação que esta sendo feita. 
+<p> Resumindo o que acontece com o problema: Em vez de receber apenas uma query ele retorna varias, passando a relacao dentro do metodo ele vai retornar apenas uma.
+
+## Lazy eager loading
+<p> Ultilizamos o metodo load com um if passando a condicao que ele apenas carregaria se fosse true, fazendo o mesmo trabalho do metodo with porem com condição de true ou false.
+
+
 
